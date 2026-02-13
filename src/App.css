@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, #ff1e1e, #4a0000);
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.proposal-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 50px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  max-width: 90%;
+}
+
+.boy-avatar { font-size: 100px; margin-bottom: 10px; display: block; }
+.status-text { color: #ffd700; font-weight: 600; margin-bottom: 20px; letter-spacing: 1px; }
+.floating-ring { font-size: 120px; margin: 10px 0; filter: drop-shadow(0 0 20px gold); }
+
+.proposal-title {
+  font-family: 'Dancing Script', cursive;
+  color: white;
+  font-size: 4.5rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.button-row {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Essential for button positioning */
+}
+
+.yes-btn {
+  background: linear-gradient(45deg, #ffd700, #ffae00);
+  color: #4a0000;
+  padding: 18px 70px;
+  font-size: 1.8rem;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+}
+
+/* THE RUNAWAY BUTTON CSS */
+.no-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid white;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 300;
+  transition: all 0.15s ease-out; /* Makes the jump look smooth but fast */
+}
+
+/* Gallery Styles remain as you had them */
+/* Enhanced Gallery Container */
+.gallery-container {
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(circle, #4a0000, #1a0000); /* Darker velvet feel */
+}
+
+/* 1. Improved Grid Layout */
+.photo-stream {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* 2. The Polaroid Frame */
+.photo-frame {
+  background: #fdfdfd;
+  padding: 15px 15px 60px 15px; /* Deeper bottom for text */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 3. Aesthetic Random Tilts */
+.photo-frame:nth-child(odd) { transform: rotate(-3deg); }
+.photo-frame:nth-child(even) { transform: rotate(3deg); }
+.photo-frame:nth-child(3n) { transform: rotate(-1.5deg); }
+
+/* 4. Hover State: Elevate & Straighten */
+.photo-frame:hover {
+  transform: scale(1.1) rotate(0deg) translateY(-20px);
+  z-index: 100;
+  box-shadow: 0 30px 60px rgba(255, 215, 0, 0.2); /* Soft Gold Glow */
+}
+
+/* 5. Image Styling */
+.photo-frame img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border: 1px solid #eee;
+  display: block;
+}
+
+/* 6. Caption Styling */
+.photo-frame::after {
+  content: "Our Memory ❤️"; /* Default text */
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+
+
+.gold-btn {
+  background: #ffd700;
+  color: #4a0000;
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 20px gold;
+}
