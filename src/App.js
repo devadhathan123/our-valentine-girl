@@ -40,7 +40,7 @@ function App() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.5 }}
           >
-            <h1 className="proposal-title" style={{ fontSize: '3rem' }}>For My Everything ❤️</h1>
+            <h1 className="proposal-title" style={{ fontSize: '3rem' }}>For My sundariiiiiiii ❤️</h1>
             <p className="status-text">I have a secret for you...</p>
             <button className="gold-btn" onClick={() => setStage('propose')}>UNFOLD</button>
           </motion.div>
@@ -61,7 +61,7 @@ function App() {
             
             <motion.div className="floating-ring" animate={{ y: [0, -20, 0], rotateY: 360 }} transition={{ duration: 4, repeat: Infinity }}>💍</motion.div>
 
-            <h1 className="proposal-title">Will you marry me?</h1>
+            <h1 className="proposal-title">Will you marry me sothmani?</h1>
 
             <div className="button-row">
               <button 
@@ -88,7 +88,7 @@ function App() {
         {stage === 'invitation' && (
           <motion.div key="invite" className="proposal-box" initial={{ scale: 0 }} animate={{ scale: 1 }}>
             <Confetti width={windowSize.width} height={windowSize.height} numberOfPieces={200} recycle={false} />
-            <h1 className="proposal-title" style={{ fontSize: '3rem' }}>Forever Starts Now! ❤️</h1>
+            <h1 className="proposal-title" style={{ fontSize: '3rem' }}>The day i met you my life become color full kunjipenne! ❤️</h1>
             <p className="status-text">Want to see our beautiful story?</p>
             <button className="gold-btn" onClick={() => setStage('gallery')}>View Memories ✨</button>
           </motion.div>
